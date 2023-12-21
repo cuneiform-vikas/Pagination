@@ -24,6 +24,8 @@ const App = () => {
       <h1>Users Data</h1>
       <Table users={currTableData} />
       <Pagination
+        tableRow={tableRow}
+        setTableRow={setTableRow}
         currTable={currTable}
         TotalTables={TotalTables}
         setCurrTable={setCurrTable}

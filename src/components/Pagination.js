@@ -1,6 +1,12 @@
 import React from "react";
 
-const Pagination = ({ currTable, setCurrTable, TotalTables }) => {
+const Pagination = ({
+  currTable,
+  setCurrTable,
+  TotalTables,
+  tableRow,
+  setTableRow,
+}) => {
   const goToNextTable = () => {
     if (currTable < TotalTables) {
       setCurrTable(currTable + 1);
@@ -17,6 +23,16 @@ const Pagination = ({ currTable, setCurrTable, TotalTables }) => {
   return (
     <nav>
       <ul>
+        <li>
+          Rows:{" "}
+          <input
+            type="number"
+            value={tableRow}
+            max={TotalTables}
+            min={1}
+            onChange={(e) => setTableRow(e.target.value)}
+          />
+        </li>
         <li>
           {currTable} of {TotalTables}{" "}
         </li>
