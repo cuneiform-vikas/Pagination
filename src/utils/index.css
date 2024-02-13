@@ -30,29 +30,63 @@ body {
   padding: 10px 20px;
 }
 
-ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-li {
-  list-style-type: none;
-}
-
-li input {
-
-  border: 1px solid black;
-  outline: none;
-  padding: .4rem;
+.container > div {
+  overflow-x: auto;
 }
 table {
   width: 100%;
   text-align: left;
+  border-collapse: collapse;
 }
 
 table th {
+  padding: 0.4rem;
   font-size: 1.2rem;
   border-bottom: 1px solid black;
+}
+
+table td {
+  padding: 0.2rem;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: rgba(173, 216, 230, 0.616);
+}
+
+tbody td:nth-child(5){
+  width: 20%;
+}
+
+td:nth-last-child(2) {
+  width: 40%;
+}
+
+.container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+li,
+label {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+nav input {
+  border: 1px solid black;
+  outline: none;
+  padding: 0.4rem;
+}
+
+input:focus {
+  background: rgba(97, 113, 161, 0.13);
+  outline: 1px solid rgb(0, 0, 0);
 }
